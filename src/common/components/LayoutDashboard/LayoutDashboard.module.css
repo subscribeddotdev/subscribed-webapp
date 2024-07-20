@@ -29,10 +29,9 @@
     margin-bottom: var(--space-1);
   }
 
-  background-color: red;
-
+  &:hover,
   &.menuItemActive {
-    background-color: red;
+    background-color: var(--gray-3);
   }
 }
 
@@ -58,7 +57,6 @@
 .main {
   min-height: 100vh;
   margin-left: 240px;
-  padding: var(--space-1);
   width: calc(100% - 240px);
 }
 
@@ -66,4 +64,5 @@
 * Content
 **/
 .content {
+  padding: var(--space-5);
 }
