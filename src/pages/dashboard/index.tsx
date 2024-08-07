@@ -1,5 +1,5 @@
 import { LayoutDashboard } from "@@/common/components/LayoutDashboard/LayoutDashboard";
-import { PageMeta } from "@@/common/components/LayoutDashboard/PageMeta";
+import { PageMeta } from "@@/common/components/PageMeta/PageMeta";
 import { GetServerSideProps } from "next";
 
 interface Props {}

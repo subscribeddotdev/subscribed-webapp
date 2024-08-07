@@ -12,7 +12,7 @@ interface MenuItemProps extends PropsWithChildren {
 
 export function MenuItem({ children, href, active = false }: MenuItemProps) {
   return (
-    <li className={classnames(styles.menuItem, { [styles.menuItemActive]: active })}>
+    <li className={classnames(styles.menuItem, { [styles.menuItemActive]: active })} data-active={active}>
       <Link className={styles.menuItemLink} href={href}>
         {children}
       </Link>
@@ -50,11 +50,11 @@ export function MenuList({}: Props) {
 
   return (
     <ul className={styles.menu}>
-      {menuItems.map((item, idx) => (
-        <MenuItem active={router.asPath.includes(item.path)} key={idx} href={item.path}>
-          {item.icon} {item.label}
-        </MenuItem>
-      ))}
+      {menuItems.map((item, idx) => {
+        return <MenuItem active={router.asPath === item.path} key={idx} href={item.path}>
+        {item.icon} {item.label}
+      </MenuItem>
+      })}
     </ul>
   );
 }

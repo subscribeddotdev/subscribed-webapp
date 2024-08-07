@@ -40,3 +40,5 @@ terraform/*.tfstate
 terraform/*.tfstate.backup
 
 .vscode
+.openapi
+src/common/libs/backendapi/client
