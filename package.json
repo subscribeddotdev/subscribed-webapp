@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "init": "mkdir .openapi",
-    "test": "echo 'nothing here, yet'",
+    "test:unit": "echo 'nothing here, yet'",
     "openapi": "npx @openapitools/openapi-generator-cli generate -i ./.openapi/openapi.yml -g typescript-axios -o ./src/common/libs/backendapi/client",
     "preopenapi": "wget -P ./.openapi/ https://raw.githubusercontent.com/subscribeddotdev/subscribed-backend/main/api/openapi.yml"
   },

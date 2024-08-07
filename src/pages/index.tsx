@@ -1,4 +1,4 @@
-import { PageMeta } from "@@/common/components/LayoutDashboard/PageMeta";
+import { PageMeta } from "@@/common/components/PageMeta/PageMeta";
 import { config } from "@@/config";
 import { SignedOut, SignInButton } from "@clerk/nextjs";
 import { Heading, Link, Text } from "@radix-ui/themes";
