@@ -50,11 +50,11 @@ export function MenuList({}: Props) {
 
   return (
     <ul className={styles.menu}>
-      {menuItems.map((item, idx) => {
-        return <MenuItem active={router.asPath === item.path} key={idx} href={item.path}>
-        {item.icon} {item.label}
-      </MenuItem>
-      })}
+      {menuItems.map((item, idx) => (
+        <MenuItem active={router.asPath === item.path} key={idx} href={item.path}>
+          {item.icon} {item.label}
+        </MenuItem>
+      ))}
     </ul>
   );
 }
