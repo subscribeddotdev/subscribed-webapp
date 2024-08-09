@@ -26,7 +26,12 @@ jobs:
         run: npm ci
 
       - name: Init
-        run: npm run init
+        run: |
+          npm run init
+          npm run openapi
+
+      - name: Type check
+        run: npm run type-check
 
       - name: Lint
         run: npm run lint
@@ -37,13 +42,11 @@ jobs:
       - name: Check code formatting
         run: npx prettier --check .
 
+      - name: Test
+        run: npm run test:unit
+
       - name: Build
         env:
           NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY: ${{ secrets.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY }}
           CLERK_SECRET_KEY: ${{ secrets.CLERK_SECRET_KEY }}
-        run: |
-          npm run openapi
-          npm run build
-
-      - name: Test
-        run: npm run test:unit
+        run: npm run build

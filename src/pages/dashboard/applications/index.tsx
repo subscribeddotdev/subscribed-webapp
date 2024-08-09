@@ -2,7 +2,7 @@ import { LayoutDashboard } from "@@/common/components/LayoutDashboard/LayoutDash
 import { PageMeta } from "@@/common/components/PageMeta/PageMeta";
 import { getClientsInSSR } from "@@/common/libs/backendapi";
 import { CreateApplication } from "@@/modules/CreateApplication/CreateApplication";
-import { ListApplications } from "@@/modules/ListApplications";
+import { ListApplications } from "@@/modules/ListApplications/ListApplications";
 import { Flex, Heading } from "@radix-ui/themes";
 import { randomUUID } from "crypto";
 import { GetServerSideProps } from "next";

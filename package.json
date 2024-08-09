@@ -8,7 +8,9 @@
     "start": "next start",
     "lint": "next lint",
     "init": "mkdir .openapi",
-    "test:unit": "echo 'nothing here, yet'",
+    "test:unit": "jest",
+    "test:unit:ci": "jest --ci",
+    "type-check": "tsc --noEmit",
     "openapi": "npx @openapitools/openapi-generator-cli generate -i ./.openapi/openapi.yml -g typescript-axios -o ./src/common/libs/backendapi/client",
     "preopenapi": "wget -P ./.openapi/ https://raw.githubusercontent.com/subscribeddotdev/subscribed-backend/main/api/openapi.yml"
   },
@@ -24,11 +26,16 @@
   },
   "devDependencies": {
     "@openapitools/openapi-generator-cli": "^2.13.4",
+    "@testing-library/jest-dom": "^6.4.8",
+    "@testing-library/react": "^16.0.0",
+    "@types/jest": "^29.5.12",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "eslint": "^8",
     "eslint-config-next": "14.2.3",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
     "stylelint": "^16.8.1",
     "stylelint-config-standard": "^36.0.1",
     "typescript": "^5"
